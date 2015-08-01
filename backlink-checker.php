@@ -70,7 +70,7 @@ function get_moz_backlinks()
 	$objectURL = get_site_url();
 	// Now put your entire request together.
 	// This example uses the Mozscape URL Metrics API.
-	$requestUrl = "http://lsapi.seomoz.com/linkscape/links/".urlencode($objectURL)."?Scope=page_to_subdomain&SourceCols=4&LinkCols=10&TargetCols=0&Limit=100&Filter=external&AccessID=".$accessID."&Expires=".$expires."&Signature=".$urlSafeSignature;
+	$requestUrl = "http://lsapi.seomoz.com/linkscape/links/".urlencode($objectURL)."?Scope=page_to_subdomain&SourceCols=4&LinkCols=10&TargetCols=0&Limit=500&Filter=external&AccessID=".$accessID."&Expires=".$expires."&Signature=".$urlSafeSignature;
 	$content = wp_remote_get($requestUrl,array('timeout'=>60));
 	return json_decode($content['body'],true);
 }
