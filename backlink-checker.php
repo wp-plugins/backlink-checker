@@ -101,7 +101,7 @@ function backlink_report()
 	?>
 	<h2><?php _e('Backlink Report','backlink'); ?></h2>
 	<table class="widefat striped" cellspacing="0">
-<thead><tr><th>#</th><th><?php _e('Backlink','backlink'); ?></th><th><?php _e('Anchor Text','backlink'); ?></th><th><?php _e('Type','backlink'); ?></th></tr></thead>
+<thead><tr><th class="column-comments">#</th><th class="column-title"><?php _e('Backlink','backlink'); ?></th><th class="column-title"><?php _e('Anchor Text','backlink'); ?></th><th class="column-categories"><?php _e('Type','backlink'); ?></th></tr></thead>
 <tbody id="the-list">
 	<?php
 	$i=0;
@@ -111,7 +111,7 @@ function backlink_report()
 	{
 		$i++;
 	?>
-	<tr><td><?php echo $i; ?></td><td><a href="http://<?php echo $r['uu']; ?>" target="_blank"><?php echo $r['uu']; ?></a></td><td><?php echo $r['lnt']; ?></td><td><?php echo ($r['lf']&1)?"Nofollow":"Dofollow"; ?></td></tr>
+	<tr><td class="column-comments"><?php echo $i; ?></td><td class="column-title"><a href="http://<?php echo $r['uu']; ?>" target="_blank"><?php echo $r['uu']; ?></a></td><td class="column-title"><?php echo $r['lnt']; ?></td><td class="column-categories"><?php echo ($r['lf']&1)?"Nofollow":"Dofollow"; ?></td></tr>
 	<?php
 }
 }
