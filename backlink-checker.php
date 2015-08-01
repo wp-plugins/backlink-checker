@@ -100,7 +100,7 @@ function backlink_report()
 	{
 	?>
 	<h2><?php _e('Backlink Report','backlink'); ?></h2>
-	<table class="widefat striped" cellspacing="0">
+	<table class="widefat fixed striped" cellspacing="0">
 <thead><tr><th class="column-comments">#</th><th class="column-title"><?php _e('Backlink','backlink'); ?></th><th class="column-title"><?php _e('Anchor Text','backlink'); ?></th><th class="column-categories"><?php _e('Type','backlink'); ?></th></tr></thead>
 <tbody id="the-list">
 	<?php
